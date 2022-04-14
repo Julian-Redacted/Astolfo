@@ -22,6 +22,12 @@ client.on("messageCreate", (message) => {
     }
 })
 
+client.on("messageCreate", (message) => {
+    if (message.content == "mod abuse"){
+        message.reply("https://cdn.discordapp.com/attachments/747099007486263297/945370139833028658/stfu_low_rank.mp4")
+    }
+})
+
 const welcomeChannelId = "964238218130251856"
 
 client.on("guildMemberAdd", async (member) => {
