@@ -45,14 +45,14 @@ module.exports = bot
 //     }
 // })
 
-// const welcomeChannelId = "926530810008453120"
+ const welcomeChannelId = "926530810008453120"
 
-// client.on("guildMemberAdd", async (member) => {
-//     const img = await generateImage(member)
-//     member.guild.channels.cache.get(welcomeChannelId).send({
-//         content: `<@${member.id}> Welcome to the server!`,
-//         files: [img]
-//     })
-// })
+ client.on("guildMemberAdd", async (member) => {
+     const img = await generateImage(member)
+     member.guild.channels.cache.get(welcomeChannelId).send({
+         content: `<@${member.id}> Welcome to the server!`,
+         files: [img]
+     })
+ })
 
 client.login(process.env.TOKEN)
